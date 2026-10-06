@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Xinrui Lin · 林欣瑞</title>
+<link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- 3D 背景画布（仅 Home 可见） -->
+<canvas id="bg3d"></canvas>
+
+<!-- 花瓣容器 -->
+<div id="petal-layer"></div>
+
+<!-- 导航 -->
+<nav id="navbar">
+  <div class="nav-inner">
+    <a href="#home" class="nav-logo" data-page="home">Loyin</a>
+    <ul class="nav-links">
+      <li><a href="#home" class="nav-link active" data-page="home" data-i18n="nav.home">首页</a></li>
+      <li><a href="#project" class="nav-link" data-page="project" data-i18n="nav.project">项目</a></li>
+      <li><a href="#publications" class="nav-link" data-page="publications" data-i18n="nav.publications">发表</a></li>
+      <li><a href="#experience" class="nav-link" data-page="experience" data-i18n="nav.experience">经历</a></li>
+    </ul>
+    <button id="lang-toggle" aria-label="Switch language">EN</button>
+  </div>
+</nav>
+
+<main>
+  <!-- ============ HOME ============ -->
+  <section id="page-home" class="page active">
+    <div class="hero">
+      <div class="hero-text">
+        <h1 class="hero-name">
+          <span class="line">Xinrui</span>
+          <span class="line gold">Lin</span>
+        </h1>
+        <p class="hero-sub" data-i18n="home.sub">林欣瑞的个人主页</p>
+        <a class="email-pill" href="mailto:loyin1412@sjtu.edu.cn">✉ loyin1412@sjtu.edu.cn</a>
+      </div>
+      <div class="hero-photo">
+        <img src="assets/profile.jpg" alt="Xinrui Lin">
+      </div>
+    </div>
+
+    <div class="content-wrap">
+      <div class="card">
+        <h2 data-i18n="home.about">关于我</h2>
+        <div class="lang-zh">
+          <p class="poem">白鸟白鸟不要回头望，你要替我飞去那地方。</p>
+          <p>近期爱好是自己给自己写邮件。</p>
+        </div>
+        <div class="lang-en">
+          <p class="poem">White bird, white bird, don't look back — fly to that place for me.</p>
+          <p>Lately, my favorite hobby is writing emails to myself.</p>
+        </div>
+      </div>
+      <div class="card">
+        <h2 data-i18n="home.edu">教育经历</h2>
+        <div class="lang-zh">
+          <div class="entry">
+            <div class="entry-head">
+              <span class="edu-text">上海交通大学 · 外国语学院</span>
+              <span class="entry-date">2025.09 – 2029.06</span>
+            </div>
+          </div>
+        </div>
+        <div class="lang-en">
+          <div class="entry">
+            <div class="entry-head">
+              <span class="edu-text">School of Foreign Languages, SJTU</span>
+              <span class="entry-date">Sep 2025 – Jun 2029</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PROJECT ============ -->
+  <section id="page-project" class="page">
+    <div class="content-wrap">
+      <h1 class="page-title" data-i18n="project.title">项目经历</h1>
+      <div class="card">
+        <div class="lang-zh">
+          <div class="entry">
+            <div class="entry-head"><strong>汉语韵律及情感探知研究</strong><span class="entry-date">2025.10 – 至今</span></div>
+          </div>
+          <div class="entry">
+            <div class="entry-head"><strong>疾病隐喻与认知不公研究</strong><span class="entry-date">2026.06 – 至今</span></div>
+          </div>
+        </div>
+        <div class="lang-en">
+          <div class="entry">
+            <div class="entry-head"><strong>Research on Mandarin Prosody and Emotion Perception</strong><span class="entry-date">Oct 2025 – Present</span></div>
+          </div>
+          <div class="entry">
+            <div class="entry-head"><strong>Research on Illness Metaphors and Epistemic Injustice</strong><span class="entry-date">Jun 2026 – Present</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PUBLICATIONS ============ -->
+  <section id="page-publications" class="page">
+    <div class="content-wrap">
+      <h1 class="page-title" data-i18n="pub.title">发表情况</h1>
+      <div class="card empty"><span class="lang-zh">Coming soon…</span><span class="lang-en">Coming soon…</span></div>
+    </div>
+  </section>
+
+  <!-- ============ EXPERIENCE ============ -->
+  <section id="page-experience" class="page">
+    <div class="content-wrap">
+      <h1 class="page-title" data-i18n="exp.title">工作经历</h1>
+      <div class="exp-columns">
+        <div class="card">
+          <h2 data-i18n="exp.fulltime">全职 Full-time</h2>
+        </div>
+        <div class="card">
+          <h2 data-i18n="exp.intern">实习 Internship</h2>
+        </div>
+        <div class="card">
+          <h2 data-i18n="exp.volunteer">志愿 Volunteer</h2>
+          <div class="lang-zh">
+            <div class="entry">
+              <div class="entry-head"><strong>乡村支教</strong><span class="entry-date">2025.03 – 2025.06</span></div>
+            </div>
+          </div>
+          <div class="lang-en">
+            <div class="entry">
+              <div class="entry-head"><strong>Rural Teaching Volunteer</strong><span class="entry-date">Mar – Jun 2025</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <span>© 2026 Xinrui Lin</span>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="main.js"></script>
+</body>
+</html>
